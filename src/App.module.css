@@ -1,0 +1,79 @@
+body {
+	width: 100vw;
+	height: 100vh;
+	background: url(../src/assets/gradient-numerology-background_23-2150066810.avif) center
+		center no-repeat fixed;
+	background-size: cover;
+}
+
+.app {
+	text-align: center;
+}
+
+.header {
+	background-color: #282c34;
+	min-height: 7vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+}
+
+.calc {
+	display: flex;
+}
+
+.nums {
+	border-radius: 10px;
+	background-color: rgb(18, 164, 135);
+	color: white;
+	margin-top: 10vh;
+	margin-left: 40%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	flex-wrap: wrap-reverse;
+	width: 400px;
+	height: 500px;
+	gap: 20px;
+}
+
+.buttons {
+	margin-left: 12px;
+	border-radius: 5px;
+	width: 70px;
+	height: 70px;
+	font-size: 25px;
+}
+
+.result {
+	border: black 2px solid;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 12px;
+	background-color: rgb(153, 217, 140);
+	color: white;
+	width: 170px;
+	height: 70px;
+	border-radius: 5px;
+	font-size: 25px;
+	font-weight: 400;
+}
+
+.white {
+	border: black 2px solid;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 12px;
+	background-color: white;
+	color: black;
+	width: 170px;
+	height: 70px;
+	border-radius: 5px;
+	font-size: 25px;
+	font-weight: 400;
+}
