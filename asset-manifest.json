@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Sapsanchik.github.io/my-app/static/css/main.500d798a.css",
+    "main.js": "/Sapsanchik.github.io/my-app/static/js/main.dd3071f0.js",
+    "static/media/gradient-numerology-background_23-2150066810.avif": "/Sapsanchik.github.io/my-app/static/media/gradient-numerology-background_23-2150066810.675a11ef703d35665a92.avif",
+    "index.html": "/Sapsanchik.github.io/my-app/index.html",
+    "main.500d798a.css.map": "/Sapsanchik.github.io/my-app/static/css/main.500d798a.css.map",
+    "main.dd3071f0.js.map": "/Sapsanchik.github.io/my-app/static/js/main.dd3071f0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.500d798a.css",
+    "static/js/main.dd3071f0.js"
+  ]
+}
