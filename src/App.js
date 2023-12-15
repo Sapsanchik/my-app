@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import { MyComponent } from './MyComponent';
 
 export const App = () => {
 	return (
@@ -18,6 +19,7 @@ export const App = () => {
 					Learn React
 				</a>
 				{new Date().getFullYear()} {/* декларативный */}
+				<MyComponent />
 			</header>
 		</div>
 	);
