@@ -1,7 +1,8 @@
 import React from 'react';
+import styles from './Field.module.css';
 
-const FieldLayout = () => {
-	return <div>Field</div>;
+const FieldLayout = ({ field }) => {
+	return <div className={styles.field}>Field{field}</div>;
 };
 
 export const Field = () => {
