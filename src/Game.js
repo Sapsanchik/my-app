@@ -12,8 +12,8 @@ export const Game = () => {
 	const [isGameEnded, setIsGameEnded] = useState(false);
 	const [isDraw, setIsDraw] = useState(false);
 	const [field, setField] = useState([
-		{ id: 1, name: 1 },
-		{ id: 2, name: 2 },
+		{ id: 1, name: '1' },
+		{ id: 2, name: '2' },
 	]);
 
 	return (
