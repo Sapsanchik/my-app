@@ -11,18 +11,23 @@ export const Game = () => {
 	const [currentPlayer, setCurrentPlayer] = useState('X');
 	const [isGameEnded, setIsGameEnded] = useState(false);
 	const [isDraw, setIsDraw] = useState(false);
-	const [field, setField] = useState([
-		{ id: 1, name: '1' },
-		{ id: 2, name: '2' },
-	]);
+	const [field, setField] = useState(['', '', '', '', '', '', '', '', '']);
 
 	return (
 		<>
 			<label>
 				<GameLayout />
 				<label>
-					<Information />
-					<Field field={field} />
+					<Information
+						isDraw={isDraw}
+						isGameEnded={isGameEnded}
+						currentPlayer={currentPlayer}
+					/>
+					<Field
+						field={field}
+						currentPlayer={currentPlayer}
+						setCurrentPlayer={setCurrentPlayer}
+					/>
 				</label>
 			</label>
 		</>
