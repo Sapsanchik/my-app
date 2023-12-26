@@ -1,48 +1,32 @@
-import styles from './Game.module.css';
-import { Field } from './Field';
-import { Information } from './Information';
 import { useState } from 'react';
-
-const GameLayout = () => {
-	return <div className={styles.game}>Game</div>;
-};
+import { GameLayout } from './GameLayout';
+import { PLAYER, STATUS } from './constants';
+import { handleCellClick, handleRestart } from './handlers';
+import { createEmptyField } from './utils';
 
 export const Game = () => {
-	const [currentPlayer, setCurrentPlayer] = useState('X');
-	const [isGameEnded, setIsGameEnded] = useState(false);
-	const [isDraw, setIsDraw] = useState(false);
-	const [field, setField] = useState(['', '', '', '', '', '', '', '', '']);
+	const [status, setStatus] = useState(STATUS.TURN);
+	const [currentPlayer, setCurrentPlayer] = useState(PLAYER.CROSS);
+	const [field, setField] = useState(createEmptyField());
 
-	const onCklick = () => {
-		return (
-			setCurrentPlayer(currentPlayer),
-			setIsGameEnded(isGameEnded),
-			setIsDraw(isDraw),
-			setField(field),
-			console.log('asd')
-		);
+	const state = {
+		status,
+		setStatus,
+		currentPlayer,
+		setCurrentPlayer,
+		field,
+		setField,
 	};
 
 	return (
 		<>
-			<label>
-				<GameLayout />
-				<label>
-					<Information
-						isDraw={isDraw}
-						isGameEnded={isGameEnded}
-						currentPlayer={currentPlayer}
-					/>
-					<Field
-						field={field}
-						currentPlayer={currentPlayer}
-						setCurrentPlayer={setCurrentPlayer}
-						setField={setField}
-						isGameEnded={isGameEnded}
-					/>
-				</label>
-				<button onClick={onCklick}>Начать заново</button>
-			</label>
+			<GameLayout
+				status={status}
+				currentPlayer={currentPlayer}
+				field={field}
+				handleCellClick={(cellIndex) => handleCellClick(state, cellIndex)}
+				handleRestart={() => handleRestart(state)}
+			/>
 		</>
 	);
 };
