@@ -13,6 +13,16 @@ export const Game = () => {
 	const [isDraw, setIsDraw] = useState(false);
 	const [field, setField] = useState(['', '', '', '', '', '', '', '', '']);
 
+	const onCklick = () => {
+		return (
+			setCurrentPlayer(currentPlayer),
+			setIsGameEnded(isGameEnded),
+			setIsDraw(isDraw),
+			setField(field),
+			console.log('asd')
+		);
+	};
+
 	return (
 		<>
 			<label>
@@ -27,8 +37,11 @@ export const Game = () => {
 						field={field}
 						currentPlayer={currentPlayer}
 						setCurrentPlayer={setCurrentPlayer}
+						setField={setField}
+						isGameEnded={isGameEnded}
 					/>
 				</label>
+				<button onClick={onCklick}>Начать заново</button>
 			</label>
 		</>
 	);
